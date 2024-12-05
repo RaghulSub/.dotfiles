@@ -17,8 +17,11 @@ alias cls="clear"
 # Exit Command
 alias bye="exit"
 
-# List All Files
-alias la="ls -a"
+# List All Files : ll -> long list
+alias ll="ls -a"
+
+# poweroff command
+alias goodnight="poweroff"
 
 
 

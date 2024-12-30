@@ -18,11 +18,12 @@ alias cls="clear"
 alias bye="exit"
 
 # List All Files : ll -> long list
-alias ll="ls -a"
+alias ll="ls -lah"
+alias la="ls -a"
 
-# poweroff command
+# power command
 alias goodnight="poweroff"
-
+alias rbt="reboot"
 
 
 

@@ -31,10 +31,11 @@ if [ -f "$HOME/.dotfiles/bash/scripts/bash_sources.sh" ]; then
     . "$HOME/.dotfiles/bash/scripts/bash_sources.sh"
 fi
 
-# <<< Source Ends <<<
-. "$HOME/.cargo/env"
-
 # Starship config
 eval "$(starship  init bash)"
 
 # export STARSHIP_CONFIG="~/.config/starship/starship.toml"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

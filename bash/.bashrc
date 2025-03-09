@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-export PS1='\[\e[0;32m\]\u@\h:\[\e[0;34m\]\w\[\e[0m\]\$ '
+export PS1='\[\e[0;32m\]\u@\h \[\e[0;34m\]\w\[\e[0m\]/ $ '
 
 
 # >>> conda initialize >>>
@@ -32,7 +32,7 @@ if [ -f "$HOME/.dotfiles/bash/scripts/bash_sources.sh" ]; then
 fi
 
 # Starship config
-eval "$(starship  init bash)"
+# eval "$(starship  init bash)"
 
 # export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 

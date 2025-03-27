@@ -64,3 +64,10 @@ Kernel Security Check:
         sudo pacman -S linux-hardened
         cat /proc/sys/kernel/randomize_va_space
         ```
+
+
+
+Createing SymLink to the Necessary files
+
+
+ln -s ~/.config/nvim/* ~/.dotfiles/nvim/

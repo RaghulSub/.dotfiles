@@ -1,0 +1,1 @@
+/home/raghul/.config/nvim/init.lua

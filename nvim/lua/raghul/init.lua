@@ -1,1 +1,5 @@
-require("raghul.remap")
+require("raghul.core")
+require("raghul.plugins")
+require("raghul.Lazy")
+
+return {}

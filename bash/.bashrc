@@ -39,9 +39,9 @@ if [ -f "$HOME/.dotfiles/bash/scripts/bash_sources.sh" ]; then
 fi
 
 # Starship config
-# eval "$(starship  init bash)"
+eval "$(starship  init bash)"
 
-# export STARSHIP_CONFIG="~/.config/starship/starship.toml"
+export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

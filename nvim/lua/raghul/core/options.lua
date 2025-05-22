@@ -1,11 +1,41 @@
+vim.cmd("let g:netrw_lifestyle = 3")
+
 local opt = vim.opt
 
 local indent = 4
 
-
+-- line numbers
 opt.relativenumber = true
+opt.numberwidth = 5
 opt.number = true
 
--- for tabs & indentation
+-- for indentation
+
+opt.autoindent = true
+opt.expandtab = true
+opt.shiftwidth = indent
+opt.shiftround = true
+opt.smartindent = true
+opt.smarttab = true
+opt.softtabstop = indent
+opt.tabstop = indent
+
+-- backspace
+opt.backspace = "indent,eol,start"
+
+-- clipboard
+opt.clipboard = "unnamedplus"
+
+-- for search
+opt.ignorecase = true
+opt.smartcase = true
+
+-- splits
+opt.splitbelow = true
+opt.splitkeep = "screen"
+opt.splitright = true
+
+
+
 
 

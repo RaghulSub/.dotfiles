@@ -50,3 +50,21 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
+### --- Useful Cmdline tools --- ###
+
+# Activating the `zoxide` tool for directory navigation ( better than `cd` )
+# Check if the zoxide tool is available
+if command -v /bin/zoxide &>/dev/null; then
+    eval "$(zoxide init bash)"
+fi
+
+# Initialing TheFuck
+if command -v /bin/thefuck &>/dev/null; then
+    eval $(thefuck --alias)
+fi
+
+# Activating the `fzf` tool for fuzzy search
+# Check if the fzf tool is available
+if command -v /bin/fzf &>/dev/null; then
+    eval "$(fzf --bash)"
+fi

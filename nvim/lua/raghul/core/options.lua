@@ -29,11 +29,33 @@ opt.clipboard = "unnamedplus"
 -- for search
 opt.ignorecase = true
 opt.smartcase = true
+opt.incsearch = true
+opt.inccommand = "split" 
 
 -- splits
 opt.splitbelow = true
 opt.splitkeep = "screen"
 opt.splitright = true
+
+-- files
+opt.swapfile = false
+opt.backup = false
+opt.undofile = true
+
+-- background
+opt.termguicolors = true
+opt.background = "dark"
+-- scroll
+opt.scrolloff = 8
+
+-- filename
+opt.isfname:append("@-@")
+
+
+
+
+
+
 
 
 

@@ -40,7 +40,7 @@ keymap.set({ 'n', 'v', 'x'},"<C-w>=","<C-w>=",{
 })
 
 keymap.set({ "n", "v", "x" }, "<C-up>", "<cmd>horizontal resize +2<CR>", {
-    desc = "Dncrease the window height",
+    desc = "Decrease the window height",
 })
 
 keymap.set({ "n", "v", "x" }, "<C-down>", "<cmd>horizontal resize -2<CR>", {

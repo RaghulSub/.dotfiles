@@ -4,6 +4,12 @@ local opt = vim.opt
 
 local indent = 4
 
+
+
+
+-- g
+vim.g.editorconfig = true
+
 -- line numbers
 opt.relativenumber = true
 opt.numberwidth = 5
@@ -31,7 +37,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
 opt.inccommand = "split" 
-
+opt.hlsearch = true
 -- splits
 opt.splitbelow = true
 opt.splitkeep = "screen"
@@ -41,17 +47,21 @@ opt.splitright = true
 opt.swapfile = false
 opt.backup = false
 opt.undofile = true
+opt.updatetime = 50
+
 
 -- background
 opt.termguicolors = true
 opt.background = "dark"
+
 -- scroll
 opt.scrolloff = 8
 
 -- filename
 opt.isfname:append("@-@")
 
-
+-- mouse
+opt.mouse = "a"
 
 
 

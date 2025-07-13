@@ -16,14 +16,6 @@ if [ -f "$HOME/.dotfiles/bash/scripts/miniconda.sh" ]; then
     . "$HOME/.dotfiles/bash/scripts/miniconda.sh"
 fi
 
-# <<< conda initialize <<<
-
-source /usr/share/nvm/init-nvm.sh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="$HOME/.sdkman"
-# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 
 # >>> Source Starts >>>
 
@@ -33,13 +25,7 @@ fi
 
 # Starship config
 eval "$(starship  init bash)"
-
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 
 
@@ -61,3 +47,8 @@ fi
 if command -v /bin/fzf &>/dev/null; then
     eval "$(fzf --bash)"
 fi
+
+
+
+
+

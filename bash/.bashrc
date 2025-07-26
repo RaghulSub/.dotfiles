@@ -23,6 +23,14 @@ if [ -f "$HOME/.dotfiles/bash/scripts/bash_sources.sh" ]; then
     . "$HOME/.dotfiles/bash/scripts/bash_sources.sh"
 fi
 
+# >>> pyenv lazy loading >>>
+
+if [ -f "$HOME/.dotfiles/bash/scripts/pyenv.sh" ]; then
+    . "$HOME/.dotfiles/bash/scripts/pyenv.sh"
+fi
+
+
+
 # Starship config
 eval "$(starship  init bash)"
 export STARSHIP_CONFIG="~/.config/starship/starship.toml"

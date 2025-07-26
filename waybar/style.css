@@ -1,0 +1,56 @@
+* {
+  font-family: "FiraCode Nerd Font", "Symbols Nerd Font", sans-serif;
+  font-size: 13px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+window#waybar {
+  background: rgba(24, 24, 24, 0.95);
+  border-radius: 12px;
+  color: #eeeeee;
+  padding: 4px 8px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #bbb;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+#workspaces button.focused {
+  background: #88c0d0;
+  color: #1e1e2e;
+}
+
+#battery {
+  padding: 0 10px;
+  background-color: #2e3440;
+  border-radius: 10px;
+}
+
+#battery.charging {
+  background-color: #a3be8c;
+  color: #2e3440;
+}
+
+#battery.critical {
+  background-color: #bf616a;
+  color: white;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#custom-weather,
+#custom-launcher,
+#bluetooth,
+#tray {
+    padding: 0 10px;
+    margin: 0 4px;
+    background-color: #2e3440;
+    border-radius: 10px;
+}
+

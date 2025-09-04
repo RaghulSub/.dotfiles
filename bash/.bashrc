@@ -11,22 +11,23 @@ export PS1='\[\e[0;32m\]\u@\h \[\e[0;34m\]\w\[\e[0m\]/ $ '
 
 
 # >>> conda initialize >>>
-
 if [ -f "$HOME/.dotfiles/bash/scripts/miniconda.sh" ]; then
     . "$HOME/.dotfiles/bash/scripts/miniconda.sh"
 fi
 
-
 # >>> Source Starts >>>
-
 if [ -f "$HOME/.dotfiles/bash/scripts/bash_sources.sh" ]; then
     . "$HOME/.dotfiles/bash/scripts/bash_sources.sh"
 fi
 
 # >>> pyenv lazy loading >>>
-
 if [ -f "$HOME/.dotfiles/bash/scripts/pyenv.sh" ]; then
     . "$HOME/.dotfiles/bash/scripts/pyenv.sh"
+fi
+
+# >>> nvm lazy loading
+if [ -f "$HOME/.dotfiles/bash/scripts/nvm.sh" ]; then
+    . "$HOME/.dotfiles/bash/scripts/nvm.sh"
 fi
 
 
@@ -39,20 +40,18 @@ export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 
 ### --- Useful Cmdline tools --- ###
 
-# Activating the `zoxide` tool for directory navigation ( better than `cd` )
 # Check if the zoxide tool is available
-if command -v /bin/zoxide &>/dev/null; then
+if command -v zoxide &>/dev/null; then
     eval "$(zoxide init bash)"
 fi
 
-# Initialing TheFuck
-if command -v /bin/thefuck &>/dev/null; then
-    eval $(thefuck --alias)
+# Lazy loading thefuck
+if [ -f "$HOME/.dotfiles/bash/scripts/thefuck.sh" ]; then
+    . "$HOME/.dotfiles/bash/scripts/thefuck.sh"
 fi
 
-# Activating the `fzf` tool for fuzzy search
 # Check if the fzf tool is available
-if command -v /bin/fzf &>/dev/null; then
+if command -v fzf &>/dev/null; then
     eval "$(fzf --bash)"
 fi
 

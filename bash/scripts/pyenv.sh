@@ -1,25 +1,34 @@
-# # Simplified pyenv lazy loading
-# # Only initialize when pyenv is actually used
+# Set up pyenv environment variables
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
-# _pyenv_init_once() {
-#     # Set up pyenv environment
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    
-    # Initialize pyenv
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    
-    # Replace the wrapper with the real pyenv function
-#     unset -f pyenv
-#     unset -f _pyenv_init_once
-    
-#     # Now call pyenv with the original arguments
-#     pyenv "$@"
-# }
+# Lazy loading for pyenv - only initialize when actually needed
+_pyenv_lazy_init() {
+    if command -v pyenv >/dev/null 2>&1; then
+        # Remove the wrapper functions
+        unset -f pyenv python pip _pyenv_lazy_init
+        
+        # Initialize pyenv properly
+        eval "$(pyenv init --path)"
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+    fi
+}
 
-# # Create a wrapper function that initializes pyenv on first use
-# pyenv() {
-#     _pyenv_init_once "$@"
-# }
+# Wrapper function for pyenv
+pyenv() {
+    _pyenv_lazy_init
+    pyenv "$@"
+}
+
+# Wrapper function for python (optional - only if you want python to trigger pyenv)
+python() {
+    _pyenv_lazy_init
+    python "$@"
+}
+
+# Wrapper function for pip (optional - only if you want pip to trigger pyenv)
+pip() {
+    _pyenv_lazy_init
+    pip "$@"
+}

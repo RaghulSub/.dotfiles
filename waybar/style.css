@@ -1,56 +1,104 @@
 * {
-  font-family: "FiraCode Nerd Font", "Symbols Nerd Font", sans-serif;
-  font-size: 13px;
+  font-family: "FiraCode Nerd Font", "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
   border: none;
   margin: 0;
   padding: 0;
 }
 
 window#waybar {
-  background: rgba(24, 24, 24, 0.95);
-  border-radius: 12px;
-  color: #eeeeee;
+  background: #1e1e2e;
+  color: #cdd6f4;
   padding: 4px 8px;
 }
 
 #workspaces button {
-  padding: 0 10px;
-  color: #bbb;
-  border-radius: 8px;
-  transition: background 0.2s ease;
+  padding: 2px 8px;
+  color: #89b4fa;
+  /* background: transparent; */
+  margin: 0 2px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
-#workspaces button.focused {
-  background: #88c0d0;
+#workspaces button:hover {
+  background: rgba(137, 180, 250, 0.9);
+  /* color:  */
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  background: #89b4fa;
   color: #1e1e2e;
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(137, 180, 250, 0.4);
 }
 
 #battery {
   padding: 0 10px;
-  background-color: #2e3440;
-  border-radius: 10px;
+  font-weight: 500;
 }
-
 #battery.charging {
   background-color: #a3be8c;
   color: #2e3440;
+  border-radius: 10px;
+  font-weight: 600;
+}
+#battery.critical {
+  color: #f38ba8;
+  font-weight: 600;
+  border-radius: 10px;
+  animation: blink 1s infinite alternate;
 }
 
-#battery.critical {
-  background-color: #bf616a;
-  color: white;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 #clock,
 #pulseaudio,
 #network,
-#custom-weather,
+#cpu,
+#memory,
 #custom-launcher,
 #bluetooth,
 #tray {
-    padding: 0 10px;
-    margin: 0 4px;
-    background-color: #2e3440;
-    border-radius: 10px;
+  padding: 2px 8px;
+  margin: 0 4px;
+  font-weight: 500;
 }
 
+#clock {
+  color: #cba6f7;
+}
+#cpu {
+  color: #74c7ec;
+  font-weight: 600;
+}
+#memory {
+  color: #f5c2e7;
+  font-weight: 600;
+}
+#network {
+  color: #94e2d5;
+}
+#pulseaudio {
+  color: #fab387;
+  font-weight: 600;
+}
+#bluetooth {
+  color: #89b4fa;
+}
+#custom-launcher {
+  color: #cba6f7;
+  font-weight: 600;
+}
+#tray {
+  color: #bac2de;
+}

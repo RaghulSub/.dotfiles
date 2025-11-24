@@ -1,13 +1,32 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 8,
   "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "bluetooth", "network", "battery", "tray"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "battery",
+    "tray"
+  ],
+
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "interval": 5,
+    "tooltip": true
+  },
+
+  "memory": {
+    "format": "  {used:0.1f}G",
+    "interval": 5,
+    "tooltip": true
+  },
 
   "custom/launcher": {
-    "format": "",
+    "format": "",
     "tooltip": false,
     "on-click": "wofi --show drun"
   },
@@ -18,7 +37,7 @@
   },
 
   "clock": {
-    "format": "󰥔 {:%H:%M   %A, %d %b}",
+    "format": "󰥔 {:%H:%M   %A, %d %b}",
     "tooltip-format": "{:%A-%B-%d %H:%M}",
     "interval": 60
   },
@@ -30,9 +49,11 @@
   },
 
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀 {ifname}",
+    "format-wifi": "󰩟 {ipaddr}",
+    "format-ethernet": "󰈀 {ipaddr}",
     "format-disconnected": "󰖪 Disconnected",
+    "tooltip-format": "IP: {ipaddr}/{cidr}",
+    "on-click": "~/.dotfiles/waybar/scripts/get_ip.sh | wl-copy && notify-send 'IP Copied' \"$(~/.dotfiles/waybar/scripts/get_ip.sh) copied to clipboard\""
   },
 
   "battery": {
@@ -40,14 +61,14 @@
     "format-charging": " {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "tooltip": true,
-    "interval": 1,
+    "interval": 1
   },
 
   "bluetooth": {
     "format": " {status}",
     "format-connected": " {device_alias}",
     "format-disabled": "",
-    "on-click":"kitty -e bluetui"
+    "on-click": "kitty -e bluetui"
   },
 
   "tray": {

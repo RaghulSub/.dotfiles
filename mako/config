@@ -1,0 +1,41 @@
+
+# General
+anchor=top-right
+sort=-time
+layer=overlay
+background-color=#1e1e2e
+width=350
+height=200
+border-size=3
+border-color=#fab387
+border-radius=16
+icons=1
+max-icon-size=48
+icon-location=left
+markup=1
+actions=1
+history=1
+text-alignment=left
+default-timeout=10000
+ignore-timeout=0
+font=JetBrainsMono Nerd Font Bold 12
+
+# Padding/Margin
+margin=5
+padding=15
+
+# Urgency hints
+[urgency=low]
+border-color=#a6e3a1
+default-timeout=5000
+
+[urgency=normal]
+border-color=#fab387
+default-timeout=10000
+
+[urgency=critical]
+border-color=#f38ba8
+default-timeout=0
+
+[mode=do-not-disturb]
+invisible=1

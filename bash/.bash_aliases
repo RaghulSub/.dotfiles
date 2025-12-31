@@ -28,6 +28,8 @@ alias rbt="reboot"
 # Docker Commands
 alias lampp="docker run -d -p 80:80 -p 443:443 -p 3306:3306 tomsik68/xampp"
 
+# Application Commands
+alias zed="zeditor"
 
 # Source Commands
 alias srcPostgres="source pgadmin4/bin/activate"

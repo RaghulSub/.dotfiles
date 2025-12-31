@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Config
-LOW_THRESHOLD=20   # when to consider battery low (percent)
-RECOVERY_THRESHOLD=25  # when to consider battery recovered
+LOW_THRESHOLD=40   # when to consider battery low (percent)
+RECOVERY_THRESHOLD=50  # when to consider battery recovered
 CHECK_INTERVAL_LOW=240  # seconds between checks when low
 CHECK_INTERVAL_OK=120   # seconds between checks when ok
 
@@ -32,7 +32,7 @@ while true; do
 
     if [ "$battery" -le "$LOW_THRESHOLD" ]; then
         if [ "$low_notified" -eq 0 ]; then
-            hyprctl notify 0 5000 0 "Low battery: ${battery}%"
+            hyprctl notify 0 15000 0 "Low battery: ${battery}%"
             low_notified=1
         fi
         sleep "$CHECK_INTERVAL_LOW"

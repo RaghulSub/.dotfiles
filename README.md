@@ -1,5 +1,14 @@
 # .dotfiles
 
+Arch Linux Battery:
+
+    To Set the Battery Saver Mode in Arch use:
+    ```
+    sudo tlp power-saver
+    
+    ```
+
+
 Arch Linux Security:
 
     Lynis (Security Auditing Tool):

@@ -39,7 +39,8 @@
   "clock": {
     "format": "󰥔 {:%H:%M   %A, %d %b}",
     "tooltip-format": "{:%A-%B-%d %H:%M}",
-    "interval": 60
+    "interval": 60,
+    "on-click": ""
   },
 
   "pulseaudio": {
